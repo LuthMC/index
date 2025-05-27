@@ -361,7 +361,7 @@
     <div class="container">
         <div class="header fade-in">
             <h1>Choose Your Perfect Plan</h1>
-            <p>High-performance Minecraft server hosting with instant setup and premium support. All plans include DDoS protection and daily backups.</p>
+            <p>High-performance Minecraft server hosting with zero lag. All plans include DDoS protection and daily autobackup.</p>
         </div>
 
         <div class="hosting-toggle fade-in">
@@ -395,8 +395,8 @@
                     <li>10GB NVMe SSD</li>
                     <li>Unlimited bandwidth</li>
                     <li>Free subdomain</li>
-                    <li>24/7 support</li>
-                    <li>Daily backups</li>
+                    <li>Plugin Installer Support</li>
+                    <li>Daily AutoBackup</li>
                 </ul>
                 <button class="plan-button">Get Started</button>
             </div>
@@ -414,9 +414,8 @@
                     <li>20GB NVMe SSD</li>
                     <li>Unlimited bandwidth</li>
                     <li>Free subdomain</li>
-                    <li>Plugin support</li>
-                    <li>24/7 support</li>
-                    <li>Daily backups</li>
+                    <li>Plugin Installer Support</li>
+                    <li>Daily AutoBackup</li>
                 </ul>
                 <button class="plan-button">Get Started</button>
             </div>
@@ -433,10 +432,9 @@
                     <li>4GB DDR4 RAM</li>
                     <li>40GB NVMe SSD</li>
                     <li>Unlimited bandwidth</li>
-                    <li>Free custom domain</li>
-                    <li>Modpack support</li>
-                    <li>Priority support</li>
-                    <li>Hourly backups</li>
+                    <li>Free subdomain</li>
+                    <li>Plugin Installer Support</li>
+                    <li>Daily AutoBackup</li>
                 </ul>
                 <button class="plan-button">Get Started</button>
             </div>
@@ -453,10 +451,9 @@
                     <li>6GB DDR4 RAM</li>
                     <li>60GB NVMe SSD</li>
                     <li>Unlimited bandwidth</li>
-                    <li>Free custom domain</li>
-                    <li>All modpacks</li>
-                    <li>Priority support</li>
-                    <li>Hourly backups</li>
+                    <li>Free subdomain</li>
+                    <li>Plugin Installer Support</li>
+                    <li>Daily AutoBackup</li>
                 </ul>
                 <button class="plan-button">Get Started</button>
             </div>
@@ -473,10 +470,9 @@
                     <li>8GB DDR4 RAM</li>
                     <li>80GB NVMe SSD</li>
                     <li>Unlimited bandwidth</li>
-                    <li>Free custom domain</li>
-                    <li>All modpacks & plugins</li>
-                    <li>Dedicated support</li>
-                    <li>Real-time backups</li>
+                    <li>Free subdomain</li>
+                    <li>Plugin Installer Support</li>
+                    <li>Daily AutoBackup</li>
                 </ul>
                 <button class="plan-button">Get Started</button>
             </div>
@@ -493,10 +489,10 @@
                     <li>10GB DDR4 RAM</li>
                     <li>100GB NVMe SSD</li>
                     <li>Unlimited bandwidth</li>
-                    <li>Free custom domain</li>
+                    <li>Free subdomain</li>
                     <li>Everything included</li>
-                    <li>Dedicated support</li>
-                    <li>Real-time backups</li>
+                    <li>Plugin Installer Support</li>
+                    <li>Daily AutoBackup</li>
                 </ul>
                 <button class="plan-button">Get Started</button>
             </div>
@@ -509,27 +505,18 @@
             <div class="custom-features">
                 <div class="custom-feature">
                     <h3>Custom RAM</h3>
-                    <p>From 12GB to 64GB+ RAM configurations available</p>
+                    <p>From 1GB to 16GB+ RAM available</p>
                 </div>
                 <div class="custom-feature">
                     <h3>Dedicated CPU</h3>
-                    <p>Exclusive CPU cores for maximum performance</p>
-                </div>
-                <div class="custom-feature">
+                    <p>Exclusive CPU cores for maximum performanc="custom-feature">
                     <h3>Multiple Servers</h3>
-                    <p>Host multiple server instances with centralized management</p>
+                    <p>Host multiple server instances with zero lag</p>
                 </div>
                 <div class="custom-feature">
-                    <h3>White-Label</h3>
-                    <p>Rebrand our hosting services as your ow
-            </div>
-
-            <button class="plan-button" style="max-width: 300px;">Contact Sales Team</button>
-            
-            <div class="guarantee-badge">
-                <strong>30-Day Money-Back Guarantee</strong><br>
-                Try risk-free with our satisfaction guarantee
-            </div>
+                    <h3>Powerful & Fast</h3>
+                    <p>Uptime to 99%
+                </div>
         </div>
     </div>
 
@@ -538,20 +525,16 @@
             const toggles = document.querySelectorAll('.toggle-option');
             const amounts = document.querySelectorAll('.amount');
             
-            // Remove active class from all toggles
             toggles.forEach(toggle => toggle.classList.remove('active'));
-            
-            // Add active class to clicked toggle
+
             event.target.classList.add('active');
             
-            // Update all prices based on hosting type
             amounts.forEach(amount => {
                 const price = parseInt(amount.dataset[type]);
                 amount.textContent = price.toLocaleString('id-ID');
             });
         }
 
-        // Add scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -572,7 +555,6 @@
             observer.observe(el);
         });
 
-        // Add button hover effects
         document.querySelectorAll('.plan-button').forEach(button => {
             button.addEventListener('click', function() {
                 this.style.transform = 'scale(0.95)';
@@ -582,7 +564,6 @@
             });
         });
 
-        // Initialize with formatted numbers
         document.addEventListener('DOMContentLoaded', function() {
             const amounts = document.querySelectorAll('.amount');
             amounts.forEach(amount => {
